@@ -11,7 +11,8 @@ import Foundation
 class MoviesViewModel: ObservableObject {
     
     @Published var allMovies: [ResultModel] = []
-    
+    @Published var movie: MovieModel?
+
     //Fetching All Movies
     func getAllMovies(movieParamObject: MovieParamObject) {
         let queryItems = [
@@ -42,5 +43,34 @@ class MoviesViewModel: ObservableObject {
         }
         dataTask.resume()
     }
+    
+    func getMovieDetail(id: Int, movieParamObject: MovieParamObject) {
+        let queryItems = [
+            URLQueryItem(name: APIParamKeys.apiKey, value: movieParamObject.api_key),
+        ]
+        guard var url = URL(string: ApiUrls.baseUrl + String(id)) else { fatalError(Strings.Error.missingurl) }
+        url.append(queryItems: queryItems)
+        let urlRequest = URLRequest(url: url)
+        let dataTask = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
+            if let error = error {
+                print(Strings.Error.request, error)
+                return
+            }
+            guard let response = response as? HTTPURLResponse else { return }
+            if response.statusCode == 200 {
+                guard let data = data else { return }
+                DispatchQueue.main.async {
+                    do {
+                        self.movie = try JSONDecoder().decode(MovieModel.self, from: data)
+                    } catch let error {
+                        print(Strings.Error.decoding, error)
+                    }
+                }
+            }
+        }
+        dataTask.resume()
+
+    }
+    
     
 }

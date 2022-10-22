@@ -20,6 +20,10 @@
 		E1A3C9F7290403310087605C /* MovieTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3C9F6290403310087605C /* MovieTileView.swift */; };
 		E1A3C9F9290411A00087605C /* APIParamsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3C9F8290411A00087605C /* APIParamsKey.swift */; };
 		E1A3C9FB290423540087605C /* MovieParamObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3C9FA290423540087605C /* MovieParamObject.swift */; };
+		E1A3C9FE290454950087605C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3C9FD290454950087605C /* Extension.swift */; };
+		E1A3CA00290463F90087605C /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3C9FF290463F90087605C /* MovieDetailView.swift */; };
+		E1A3CA0229048EE10087605C /* MovieHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3CA0129048EE10087605C /* MovieHeaderView.swift */; };
+		E1A3CA04290490EC0087605C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3CA03290490EC0087605C /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		E1A3C9F6290403310087605C /* MovieTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTileView.swift; sourceTree = "<group>"; };
 		E1A3C9F8290411A00087605C /* APIParamsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParamsKey.swift; sourceTree = "<group>"; };
 		E1A3C9FA290423540087605C /* MovieParamObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieParamObject.swift; sourceTree = "<group>"; };
+		E1A3C9FD290454950087605C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		E1A3C9FF290463F90087605C /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
+		E1A3CA0129048EE10087605C /* MovieHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieHeaderView.swift; sourceTree = "<group>"; };
+		E1A3CA03290490EC0087605C /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				E1A3C9D82903F1C70087605C /* MoviesView.swift */,
+				E1A3C9FF290463F90087605C /* MovieDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -121,7 +130,9 @@
 		E1A3C9E72903F22C0087605C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E1A3CA03290490EC0087605C /* Utils.swift */,
 				E1A3C9E82903F2D50087605C /* Strings.swift */,
+				E1A3C9FD290454950087605C /* Extension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -130,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				E1A3C9F6290403310087605C /* MovieTileView.swift */,
+				E1A3CA0129048EE10087605C /* MovieHeaderView.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -217,13 +229,17 @@
 				E1A3C9F02903FA1F0087605C /* ResultModel.swift in Sources */,
 				E1A3C9EB2903F2DE0087605C /* ApiUrls.swift in Sources */,
 				E1A3C9D92903F1C70087605C /* MoviesView.swift in Sources */,
+				E1A3C9FE290454950087605C /* Extension.swift in Sources */,
 				E1A3C9F22903FA470087605C /* AllMoviesModel.swift in Sources */,
+				E1A3CA04290490EC0087605C /* Utils.swift in Sources */,
 				E1A3C9F42903FC1C0087605C /* MovieModel.swift in Sources */,
 				E1A3C9E92903F2D50087605C /* Strings.swift in Sources */,
+				E1A3CA00290463F90087605C /* MovieDetailView.swift in Sources */,
 				E1A3C9F9290411A00087605C /* APIParamsKey.swift in Sources */,
 				E1A3C9D72903F1C70087605C /* ExtolTestApp.swift in Sources */,
 				E1A3C9F7290403310087605C /* MovieTileView.swift in Sources */,
 				E1A3C9EE2903F8740087605C /* MoviesViewModel.swift in Sources */,
+				E1A3CA0229048EE10087605C /* MovieHeaderView.swift in Sources */,
 				E1A3C9FB290423540087605C /* MovieParamObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
