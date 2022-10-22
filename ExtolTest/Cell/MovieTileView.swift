@@ -10,6 +10,9 @@ import SwiftUI
 struct MovieTileView: View {
     
     var movie: ResultModel
+    var isLast: Bool
+    @ObservedObject var viewModel: MoviesViewModel
+    var page = 1
     
     var body: some View {
         ZStack {
@@ -25,13 +28,26 @@ struct MovieTileView: View {
                     Text(movie.releaseDate ?? "")
                         .font(.subheadline)
                         .foregroundColor(.gray)
-                    Spacer(minLength: 8)
-                    Text(movie.overview ?? "")
-                        .font(.footnote)
-                        .fontWeight(.light)
-                        .multilineTextAlignment(.leading)
+                        .padding(.bottom)
+                    
+                    if isLast {
+                        Text(movie.overview ?? "")
+                            .font(.footnote)
+                            .fontWeight(.light)
+                            .multilineTextAlignment(.leading)
+                            .onAppear {
+                                ProgressView(value: 6.7, total: 10.0)
+                                    .progressViewStyle(.circular)
+                                let movieParamObject = MovieParamObject(api_key: Strings.Common.apiKey, page: page + 1)
+                                viewModel.getAllMovies(movieParamObject: movieParamObject)
+                            }
+                    } else {
+                        Text(movie.overview ?? "")
+                            .font(.footnote)
+                            .fontWeight(.light)
+                            .multilineTextAlignment(.leading)
+                    }
                 }
-                .padding(.vertical, 8)
                 .frame(maxWidth: .infinity)
             }
         }
