@@ -8,17 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		E1A3C9D72903F1C70087605C /* ExtolTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3C9D62903F1C70087605C /* ExtolTestApp.swift */; };
-		E1A3C9D92903F1C70087605C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3C9D82903F1C70087605C /* ContentView.swift */; };
+		E1A3C9D92903F1C70087605C /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3C9D82903F1C70087605C /* MoviesView.swift */; };
 		E1A3C9DB2903F1C80087605C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A3C9DA2903F1C80087605C /* Assets.xcassets */; };
 		E1A3C9DE2903F1C80087605C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A3C9DD2903F1C80087605C /* Preview Assets.xcassets */; };
+		E1A3C9E92903F2D50087605C /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3C9E82903F2D50087605C /* Strings.swift */; };
+		E1A3C9EB2903F2DE0087605C /* ApiUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3C9EA2903F2DE0087605C /* ApiUrls.swift */; };
+		E1A3C9EE2903F8740087605C /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3C9ED2903F8740087605C /* MoviesViewModel.swift */; };
+		E1A3C9F02903FA1F0087605C /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3C9EF2903FA1F0087605C /* ResultModel.swift */; };
+		E1A3C9F22903FA470087605C /* AllMoviesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3C9F12903FA470087605C /* AllMoviesModel.swift */; };
+		E1A3C9F42903FC1C0087605C /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3C9F32903FC1C0087605C /* MovieModel.swift */; };
+		E1A3C9F7290403310087605C /* MovieTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3C9F6290403310087605C /* MovieTileView.swift */; };
+		E1A3C9F9290411A00087605C /* APIParamsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3C9F8290411A00087605C /* APIParamsKey.swift */; };
+		E1A3C9FB290423540087605C /* MovieParamObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A3C9FA290423540087605C /* MovieParamObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E1A3C9D32903F1C70087605C /* ExtolTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtolTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A3C9D62903F1C70087605C /* ExtolTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtolTestApp.swift; sourceTree = "<group>"; };
-		E1A3C9D82903F1C70087605C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E1A3C9D82903F1C70087605C /* MoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
 		E1A3C9DA2903F1C80087605C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1A3C9DD2903F1C80087605C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E1A3C9E82903F2D50087605C /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		E1A3C9EA2903F2DE0087605C /* ApiUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUrls.swift; sourceTree = "<group>"; };
+		E1A3C9EC2903F8440087605C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E1A3C9ED2903F8740087605C /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
+		E1A3C9EF2903FA1F0087605C /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
+		E1A3C9F12903FA470087605C /* AllMoviesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMoviesModel.swift; sourceTree = "<group>"; };
+		E1A3C9F32903FC1C0087605C /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		E1A3C9F6290403310087605C /* MovieTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTileView.swift; sourceTree = "<group>"; };
+		E1A3C9F8290411A00087605C /* APIParamsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParamsKey.swift; sourceTree = "<group>"; };
+		E1A3C9FA290423540087605C /* MovieParamObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieParamObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +70,16 @@
 		E1A3C9D52903F1C70087605C /* ExtolTest */ = {
 			isa = PBXGroup;
 			children = (
+				E1A3C9EC2903F8440087605C /* Info.plist */,
 				E1A3C9D62903F1C70087605C /* ExtolTestApp.swift */,
-				E1A3C9D82903F1C70087605C /* ContentView.swift */,
 				E1A3C9DA2903F1C80087605C /* Assets.xcassets */,
+				E1A3C9FC290424970087605C /* APIHelper */,
+				E1A3C9F52904031A0087605C /* Cell */,
+				E1A3C9E72903F22C0087605C /* Common */,
+				E1A3C9E52903F1E30087605C /* Model */,
 				E1A3C9DC2903F1C80087605C /* Preview Content */,
+				E1A3C9E42903F1D90087605C /* ViewModel */,
+				E1A3C9E62903F2200087605C /* Views */,
 			);
 			path = ExtolTest;
 			sourceTree = "<group>";
@@ -65,6 +90,58 @@
 				E1A3C9DD2903F1C80087605C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E1A3C9E42903F1D90087605C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E1A3C9ED2903F8740087605C /* MoviesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E1A3C9E52903F1E30087605C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E1A3C9F12903FA470087605C /* AllMoviesModel.swift */,
+				E1A3C9F32903FC1C0087605C /* MovieModel.swift */,
+				E1A3C9EF2903FA1F0087605C /* ResultModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E1A3C9E62903F2200087605C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E1A3C9D82903F1C70087605C /* MoviesView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E1A3C9E72903F22C0087605C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E1A3C9E82903F2D50087605C /* Strings.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E1A3C9F52904031A0087605C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E1A3C9F6290403310087605C /* MovieTileView.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E1A3C9FC290424970087605C /* APIHelper */ = {
+			isa = PBXGroup;
+			children = (
+				E1A3C9EA2903F2DE0087605C /* ApiUrls.swift */,
+				E1A3C9F8290411A00087605C /* APIParamsKey.swift */,
+				E1A3C9FA290423540087605C /* MovieParamObject.swift */,
+			);
+			path = APIHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +214,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1A3C9D92903F1C70087605C /* ContentView.swift in Sources */,
+				E1A3C9F02903FA1F0087605C /* ResultModel.swift in Sources */,
+				E1A3C9EB2903F2DE0087605C /* ApiUrls.swift in Sources */,
+				E1A3C9D92903F1C70087605C /* MoviesView.swift in Sources */,
+				E1A3C9F22903FA470087605C /* AllMoviesModel.swift in Sources */,
+				E1A3C9F42903FC1C0087605C /* MovieModel.swift in Sources */,
+				E1A3C9E92903F2D50087605C /* Strings.swift in Sources */,
+				E1A3C9F9290411A00087605C /* APIParamsKey.swift in Sources */,
 				E1A3C9D72903F1C70087605C /* ExtolTestApp.swift in Sources */,
+				E1A3C9F7290403310087605C /* MovieTileView.swift in Sources */,
+				E1A3C9EE2903F8740087605C /* MoviesViewModel.swift in Sources */,
+				E1A3C9FB290423540087605C /* MovieParamObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +356,7 @@
 				DEVELOPMENT_TEAM = PJ6ZYJ82NX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExtolTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +386,7 @@
 				DEVELOPMENT_TEAM = PJ6ZYJ82NX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExtolTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

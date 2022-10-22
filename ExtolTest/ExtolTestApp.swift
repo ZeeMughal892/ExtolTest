@@ -11,7 +11,7 @@ import SwiftUI
 struct ExtolTestApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MoviesView()
         }
     }
 }
