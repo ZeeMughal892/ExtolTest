@@ -9,22 +9,33 @@ import SwiftUI
 
 struct MoviesView: View {
     
-    @ObservedObject var viewModel = MoviesViewModel()
+    @StateObject var viewModel = MoviesViewModel()
+    @State var selectedTag: Bool = false
 
     var body: some View {
         NavigationView {
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack {
                     ForEach(viewModel.allMovies, id: \.id) { movie in
-                        
+                        NavigationLink(destination: MovieDetailView(id: movie.id ?? 0)) {
+                            MovieTileView(movie: movie)
+                        }
                     }
                 }
                 .padding()
+                .navigationTitle("Movies")
+            }
+            .refreshable {
+                makeCall()
             }
         }.onAppear {
-            let movieParamObject = MovieParamObject(api_key: Strings.Common.apiKey)
-            viewModel.getAllMovies(movieParamObject: movieParamObject)
+            makeCall()
         }
+    }
+    
+    func makeCall() {
+        let movieParamObject = MovieParamObject(api_key: Strings.Common.apiKey)
+        viewModel.getAllMovies(movieParamObject: movieParamObject)
     }
 }
 
