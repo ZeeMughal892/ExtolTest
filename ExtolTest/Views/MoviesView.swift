@@ -10,25 +10,25 @@ import SwiftUI
 struct MoviesView: View {
     
     @StateObject var viewModel = MoviesViewModel()
-    @State var selectedTag: Bool = false
 
     var body: some View {
         NavigationView {
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack {
-                    ForEach(viewModel.allMovies, id: \.id) { movie in
-                        NavigationLink(destination: MovieDetailView(id: movie.id ?? 0)) {
-                            MovieTileView(movie: movie)
-                        }
+            List(0..<viewModel.allMovies.count, id: \.self) { i in
+                NavigationLink(destination: MovieDetailView(viewModel: viewModel, id: viewModel.allMovies[i].id ?? 0)) {
+                    if i == self.viewModel.allMovies.count - 1 {
+                        MovieTileView(movie: viewModel.allMovies[i], isLast: true, viewModel: viewModel)
+                    } else {
+                        MovieTileView(movie: viewModel.allMovies[i], isLast: false, viewModel: viewModel)
                     }
                 }
-                .padding()
-                .navigationTitle("Movies")
-            }
-            .refreshable {
+            }.refreshable {
+                viewModel.allMovies = []
                 makeCall()
             }
-        }.onAppear {
+            .navigationTitle("Movies")
+        }
+        
+        .onAppear {
             makeCall()
         }
     }
