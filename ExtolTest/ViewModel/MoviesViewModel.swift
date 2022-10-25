@@ -20,8 +20,7 @@ class MoviesViewModel: ObservableObject {
             URLQueryItem(name: APIParamKeys.language, value: movieParamObject.language),
             URLQueryItem(name: APIParamKeys.page, value: String(movieParamObject.page ?? 1))
         ]
-        guard var url = URL(string: ApiUrls.getAllMovies) else { fatalError(Strings.Error.missingurl) }
-        url.append(queryItems: queryItems)
+        guard let url = URL(string: ApiUrls.getAllMovies + "?\(queryItems[0])" + "&\(queryItems[1])" + "&\(queryItems[2])") else { fatalError(Strings.Error.missingurl) }
         let urlRequest = URLRequest(url: url)
         let dataTask = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             if let error = error {
@@ -48,8 +47,7 @@ class MoviesViewModel: ObservableObject {
         let queryItems = [
             URLQueryItem(name: APIParamKeys.apiKey, value: movieParamObject.api_key),
         ]
-        guard var url = URL(string: ApiUrls.baseUrl + String(id)) else { fatalError(Strings.Error.missingurl) }
-        url.append(queryItems: queryItems)
+        guard let url = URL(string: ApiUrls.baseUrl + String(id) + "?\(queryItems[0])") else { fatalError(Strings.Error.missingurl) }
         let urlRequest = URLRequest(url: url)
         let dataTask = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             if let error = error {

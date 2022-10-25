@@ -19,9 +19,7 @@ struct MovieDetailView: View {
                     Image(uiImage: UIImage().convertUrlToImage(endpoint: viewModel.movie?.backdropPath ?? ""))
                         .resizable()
                         .scaledToFit()
-                        .overlay {
-                            Rectangle().foregroundColor(Color("shadowColor")).opacity(0.75)
-                        }
+                    Rectangle().foregroundColor(Color("shadowColor")).opacity(0.75)
                     MovieHeaderView(movie: viewModel.movie)
                         .foregroundColor(.white)
                 }

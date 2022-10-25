@@ -13,19 +13,23 @@ struct MoviesView: View {
 
     var body: some View {
         NavigationView {
-            List(0..<viewModel.allMovies.count, id: \.self) { i in
-                NavigationLink(destination: MovieDetailView(viewModel: viewModel, id: viewModel.allMovies[i].id ?? 0)) {
-                    if i == self.viewModel.allMovies.count - 1 {
-                        MovieTileView(movie: viewModel.allMovies[i], isLast: true, viewModel: viewModel)
-                    } else {
-                        MovieTileView(movie: viewModel.allMovies[i], isLast: false, viewModel: viewModel)
+            if #available(iOS 15.0, *) {
+                List(0..<viewModel.allMovies.count, id: \.self) { i in
+                    NavigationLink(destination: MovieDetailView(viewModel: viewModel, id: viewModel.allMovies[i].id ?? 0)) {
+                        if i == self.viewModel.allMovies.count - 1 {
+                            MovieTileView(movie: viewModel.allMovies[i], isLast: true, viewModel: viewModel)
+                        } else {
+                            MovieTileView(movie: viewModel.allMovies[i], isLast: false, viewModel: viewModel)
+                        }
                     }
+                }.refreshable {
+                    viewModel.allMovies = []
+                    makeCall()
                 }
-            }.refreshable {
-                viewModel.allMovies = []
-                makeCall()
+                .navigationTitle("Movies")
+            } else {
+                // Fallback on earlier versions
             }
-            .navigationTitle("Movies")
         }
         
         .onAppear {
